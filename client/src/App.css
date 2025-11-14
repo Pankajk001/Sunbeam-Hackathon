@@ -1,0 +1,329 @@
+.app-shell {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #fdfdfd, #eef1f6 65%);
+  padding-bottom: 3rem;
+}
+
+.app-header {
+  padding: 3rem clamp(1.5rem, 5vw, 4rem) 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  color: #1d2331;
+  flex-wrap: wrap;
+}
+
+.app-header h1 {
+  margin: 0.4rem 0 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.8rem;
+  color: #79819a;
+}
+
+.protected-layout {
+  min-height: 100vh;
+  padding-bottom: 3rem;
+}
+
+.page-container {
+  margin-top: 1rem;
+  padding: 0 clamp(1rem, 5vw, 4rem);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.auth-page {
+  padding: 3rem clamp(1.5rem, 5vw, 4rem);
+  color: #1d2331;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.page-hero h1 {
+  margin: 0.5rem 0;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+.page-hero p {
+  max-width: 560px;
+}
+
+.nav-tabs {
+  display: flex;
+  gap: 0.75rem;
+  padding: 0 clamp(1rem, 5vw, 4rem);
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+  border: 1px solid rgba(25, 45, 80, 0.12);
+  color: #4a5272;
+  text-decoration: none;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.nav-link.active {
+  background: #2d72ff;
+  color: #fff;
+  border-color: #1e56cc;
+}
+
+.auth-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: #ffffff;
+  color: #1d2331;
+  border-radius: 20px;
+  padding: 1.75rem;
+  border: 1px solid rgba(16, 42, 67, 0.08);
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
+}
+
+.intro-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  color: #5b627e;
+}
+
+.user-chip {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid rgba(29, 35, 49, 0.1);
+  box-shadow: 0 10px 30px rgba(34, 40, 70, 0.12);
+}
+
+.user-chip span {
+  font-size: 0.85rem;
+  color: #6a738f;
+}
+
+.user-chip button {
+  border: none;
+  background: #ff5470;
+  color: #fff;
+  padding: 0.55rem 1.5rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.card h2,
+.card h3 {
+  margin-top: 0;
+}
+
+.form-grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.form-grid label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  color: #5f6782;
+}
+
+.form-grid input,
+.form-grid select,
+.form-grid textarea {
+  background: rgba(250, 251, 252, 0.9);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 12px;
+  padding: 0.75rem 1rem;
+  color: #1d2331;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.form-grid textarea {
+  resize: vertical;
+}
+
+.card button {
+  border: none;
+  border-radius: 12px;
+  padding: 0.85rem 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+
+.card button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.primary {
+  background: linear-gradient(135deg, #2d72ff, #4ba3ff);
+  color: #fff;
+  box-shadow: 0 15px 30px rgba(45, 114, 255, 0.35);
+}
+
+.secondary {
+  background: rgba(45, 114, 255, 0.08);
+  color: #2d72ff;
+}
+
+.danger {
+  background: rgba(255, 84, 112, 0.12);
+  color: #d62846;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.section-heading input {
+  max-width: 240px;
+}
+
+.movie-grid {
+  display: grid;
+  gap: 0.75rem;
+  margin: 1.25rem 0 0;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.movie-card {
+  padding: 1rem;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(20, 25, 45, 0.05);
+  box-shadow: 0 10px 25px rgba(20, 25, 45, 0.08);
+}
+
+.review-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.review-card {
+  padding: 1rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(20, 25, 45, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.review-card header,
+.review-card footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.review-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.review-actions button {
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+}
+
+.muted {
+  color: #7b839b;
+}
+
+.center {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.divider {
+  height: 1px;
+  background: rgba(15, 23, 42, 0.08);
+  margin: 2rem 0;
+}
+
+.pill {
+  padding: 0.45rem 1.25rem;
+  border-radius: 999px;
+  border: 1px solid rgba(27, 35, 60, 0.15);
+  background: rgba(255, 255, 255, 0.8);
+  color: inherit;
+  cursor: pointer;
+  transition: all 120ms ease;
+}
+
+.pill.active {
+  background: rgba(45, 114, 255, 0.18);
+  border-color: rgba(45, 114, 255, 0.6);
+}
+
+.card-header {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.badge {
+  padding: 0.2rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid rgba(45, 114, 255, 0.25);
+  font-size: 0.8rem;
+  color: #2d72ff;
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 640px) {
+  .app-header {
+    padding: 2rem 1rem 1rem;
+  }
+
+  .auth-page,
+  .page-container {
+    padding: 0 1rem;
+  }
+
+  .section-heading {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .user-chip {
+    width: 100%;
+    justify-content: space-between;
+  }
+}

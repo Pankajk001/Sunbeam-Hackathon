@@ -1,0 +1,168 @@
+------Register--------
+{
+    "first_name": "Pankaj",
+    "last_name": "Kumar",
+    "email":"pk@gmail.com",
+    "password":"test",
+    "mobile":"1234567890",
+    "birth": "1990-05-21" 
+}
+
+api - http://localhost:4000/users/register
+
+response - {"success":true,"message":"User registered successfully","data":{"fieldCount":0,"affectedRows":1,"insertId":1,"info":"","serverStatus":2,"warningStatus":0,"changedRows":0}}
+
+
+
+--------Login--------
+
+{
+    "email": "pk@gmail.com",
+    "password":"test"
+}
+
+api - http://localhost:4000/users/login
+
+{
+    "success": true,
+    "message": "User logged in successfully",
+    "data": {
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEsImlhdCI6MTc2MzA5NzQzMCwiZXhwIjoxNzYzMTgzODMwfQ.GgZdK12pROgiteWIihSVR2_tMwNlZfOOlFd5IbMSgKY",
+        "first_name": "Pankaj",
+        "last_name": "Kumar",
+        "email": "pk@gmail.com"
+    }
+}
+
+
+
+------edit Profile---
+{
+    "first_name": "Pankaj",
+    "last_name": "Kumar",
+    "email":"pk@gmail.com",
+    "password":"test",
+    "mobile":"1234567890",
+    "birth": "2002-10-06" 
+}
+
+api - http://localhost:4000/users/editprofile
+
+{
+    "success": true,
+    "message": "Profile Updated successfully",
+    "data": {
+        "fieldCount": 0,
+        "affectedRows": 1,
+        "insertId": 0,
+        "info": "Rows matched: 1  Changed: 1  Warnings: 0",
+        "serverStatus": 2,
+        "warningStatus": 0,
+        "changedRows": 1
+    }
+}
+
+
+------change password--------
+
+{
+    "oldPassword": "test",
+    "newPassword": "test1"
+
+}
+
+api - http://localhost:4000/users/changepassword
+
+
+{
+    "success": true,
+    "message": "Password updated successfully"
+}
+
+
+---------Movies---------------
+
+
+---Get AllMovies
+
+api - http://localhost:4000/movies/getAllMovies
+
+{
+    "success": true,
+    "message": "Movies fetched successfully",
+    "data": [
+        {
+            "id": 1,
+            "title": "The Shawshank Redemption",
+            "release_date": "1994-09-22T18:30:00.000Z"
+        },
+        {
+            "id": 2,
+            "title": "The Godfather",
+            "release_date": "1972-03-23T18:30:00.000Z"
+        },
+        {
+            "id": 3,
+            "title": "The Dark Knight",
+            "release_date": "2008-07-17T18:30:00.000Z"
+        },
+        {
+            "id": 4,
+            "title": "Pulp Fiction",
+            "release_date": "1994-10-13T18:30:00.000Z"
+        },
+        {
+            "id": 5,
+            "title": "Fight Club",
+            "release_date": "1999-10-14T18:30:00.000Z"
+        }
+    ]
+}
+
+
+
+------Create Reviews
+
+
+{
+    "movie_id": 1,
+    "review": "pankaj watched it means movie is Awesome !",
+    "rating": 5
+
+}
+
+
+---api - http://localhost:4000/movies/createReview
+
+
+{"success":true,"message":"Review added successfully","review_id":6}
+
+
+-----update Review
+
+--api - http://localhost:4000/movies/editReview/1
+
+{
+    "review": "Updated review, much better!",
+    "rating": 9
+}
+
+{"success":true,"message":"Review updated successfully","review_id":"1"}
+
+
+
+----Delete Review
+
+--api - http://localhost:4000/movies/deleteReview/3
+
+{"success":true,"message":"Review deleted successfully"}
+
+
+
+
+
+----Get All Reviews
+
+--api - http://localhost:4000/movies/getAllReviews
+
+{"success":true,"message":"Reviews fetched successfully","data":[{"id":3,"movie_id":3,"review":"Great movie","rating":4,"user_id":1,"modified_at":"2025-11-14T06:57:36.000Z"},{"id":4,"movie_id":4,"review":"Nice movie","rating":2,"user_id":1,"modified_at":"2025-11-14T06:57:36.000Z"},{"id":5,"movie_id":5,"review":"Bad movie","rating":5,"user_id":1,"modified_at":"2025-11-14T06:57:36.000Z"}]}
